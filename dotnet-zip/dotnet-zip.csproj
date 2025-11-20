@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <PackageTags>dotnet cli packaging zip archive</PackageTags>
     <Description>Create .zip files of your .NET Core projects straight from the command line.
 
@@ -13,12 +13,17 @@ See https://github.com/qmfrederik/dotnet-packaging/ for more information on how 
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.21308.1" />
-    <PackageReference Include="Microsoft.Build" Version="16.6.0" ExcludeAssets="runtime" />
-    <PackageReference Include="Microsoft.Build.Locator" Version="1.4.1" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Build" Version="18.0.2" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Locator" Version="1.11.1" />
   </ItemGroup>
   
   <ItemGroup>
     <Compile Include="..\dotnet-rpm\PackagingRunner.cs" Link="PackagingRunner.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Update="Microsoft.SourceLink.GitHub" Version="8.0.0" />
+    <PackageReference Update="NerdBank.GitVersioning" Version="3.9.50" />
   </ItemGroup>
 </Project>

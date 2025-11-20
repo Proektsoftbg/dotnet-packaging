@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "dotnet-zip": {
+      "commandName": "Project",
+      "commandLineArgs": "c:\\Users\\Ned\\Documents\\GitHub\\CalcpadVM\\Calcpad.Cli\\Calcpad.Cli.csproj -c Release"
+    }
+  }
+}
